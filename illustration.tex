@@ -48,13 +48,8 @@
 	% Fourth row
 	\draw [draw = none, pattern = north east lines] (4, -1) rectangle (7, -4);
 	\draw [draw = none, pattern = north east lines] (12, -1) rectangle (15, -4);
-	
-	\draw [draw = none, fill = white!50!red, fill opacity = 0.3] (0, -4) rectangle (3, -3.5);
-	\draw [draw = none, fill = white!50!red, fill opacity = 0.3] (0, -3.5) rectangle (0.5, -1);
-	\draw [draw = none, pattern = horizontal lines] (0, -4) rectangle (3, -3.5);
-	\draw [draw = none, pattern = horizontal lines] (0, -3.5) rectangle (0.5, -1);
-	\draw [draw = none, pattern = north east lines] (0.5, -3.5) rectangle (3, -1);
-	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (0.5, -3.5) rectangle (3, -1);
+	\draw [draw = none, pattern = north east lines] (0, -4) rectangle (3, -1);
+	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (0, -4) rectangle (3, -1);
 	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (4, -1) rectangle (7, -4);
 	\draw [draw = none, fill = white!20!yellow, fill opacity = 0.3] (8, -1) rectangle (11, -4);
 	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (12, -1) rectangle (15, -4);
@@ -64,34 +59,35 @@
 	\draw [draw = none, pattern = north east lines] (17, 4) rectangle (20, 7);
 	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (17, 4) rectangle (20, 7);
 	%% Third row / scenario B	
-	\draw [draw = none, pattern = north east lines] (17, 0) rectangle (20, 3);
-	\draw [draw = none, fill = white!20!yellow, fill opacity = 0.3] (17, 0) rectangle (20, 3);
+	\draw [draw = none, pattern = north east lines] (17.5, 0.5) rectangle (20, 3);
 	\draw [draw = none, pattern = vertical lines] (17, 0) rectangle (20, 0.5);
 	\draw [draw = none, pattern = vertical lines] (17, 0) rectangle (17.5, 3);
 	\draw [draw = none, fill = white!50!green, fill opacity = 0.3] (17, 0) rectangle (20, 0.5);
 	\draw [draw = none, fill = white!50!green, fill opacity = 0.3] (17, 0.5) rectangle (17.5, 3);
-	\draw [draw = none, pattern = north east lines] (17.5, 0.5) rectangle (20, 3);
 	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (17.5, 0.5) rectangle (20, 3);
 	%% Fourth row / scenario C
 	\draw [draw = none, pattern = north east lines] (17, -1) rectangle (20, -4);
-	\draw [draw = none, fill = white!20!yellow, fill opacity = 0.3] (17, -1) rectangle (20, -4);
-	\draw [draw = none, pattern = horizontal lines] (17, -1) rectangle (17.5, -3.5);
-	\draw [draw = none, pattern = horizontal lines] (17, -3.5) rectangle (20, -4);
-	\draw [draw = none, fill = white!50!red, fill opacity = 0.3] (17, -1) rectangle (17.5, -3.5);
-	\draw [draw = none, fill = white!50!red, fill opacity = 0.3] (17, -3.5) rectangle (20, -4);
 	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (17, -1) rectangle (20, -4);
 	
 	% Arrows
-	\draw [->, ultra thick] (15.5, 9.5) -- (16.5, 9.5);
-	\draw [->, ultra thick] (15.5, 5.5) -- (16.5, 5.5);
-	\draw [->, ultra thick] (15.5, 1.5) -- (16.5, 1.5);
-	\draw [->, ultra thick] (15.5, -2.5) -- (16.5, -2.5);
+	\draw [->, thick] (15.5, 9.5) -- (16.5, 9.5);
+	\draw [->, thick] (15.5, 5.5) -- (16.5, 5.5);
+	\draw [->, thick] (15.5, 1.5) -- (16.5, 1.5);
+	\draw [->, thick] (15.5, -2.5) -- (16.5, -2.5);
+	%% For timeline
+	\draw [->, thick] (-1, 2.5) -- (-1, -3.5);
+	\draw [->, thick] (-1, -5.5) -- (-1, -11.5);
+	\node[align = center] at (-1, 3) {$t$};
+	\node[align = center, rotate = 90] at (-1.5, -0.5) {Before June 2020};
+	\node[align = center, rotate = 90] at (-1.5, -8.5) {After June 2020};
 	
 	% Vertical labels
 	\node[align = center] at (22, 9.5) {Baseline\\ (no interventions)};
 	\node[align = center] at (22, 5.5) {Scenario A \\ (all social distancing\\ interventions)};
-	\node[align = center] at (22, 1.5) {Scenario B \\ (all interventions\\ + schools closed)};
-	\node[align = center] at (22, -2.5) {Scenario C \\ (all interventions\\ + schools open)};
+	\node[align = center] at (22, 1.5) {Scenario B \\ (all interventions\\ + schools open)};
+	\node[align = center] at (22, -2.5) {Scenario C \\ (all interventions\\ + schools closed)};
+	\node[align = center] at (22, -6.5) {Scenario B \\ (all interventions\\ + schools open)};
+	\node[align = center] at (22, -10.5) {Scenario C \\ (all interventions\\ + schools closed)};
 	
 	% Horizontal labels
 	\node[align = center] at (1.5, 12) {School};
@@ -101,15 +97,15 @@
 	\node[align = center] at (18.5, 12) {Total contacts};
 	
 	% Matrix labels
-	\node[align = center] at (1.5, -0.5) {Age of contact};
-	\node[align = center, rotate = 90] at (-0.5, 1.5) {Age of participant};
+	\node[align = center] at (1.5, -8.5) {Age of contact};
+	\node[align = center, rotate = 90] at (-0.5, -7.25) {Age of participant};
 	
-	\node[align = center] at (0.25, -4.25) {\small{$a_1$}};
-	\node[align = center] at (1.5, -4.25) {\small{$\ldots$}};
-	\node[align = center] at (2.75, -4.25) {\small{$a_6$}};
-	\node[align = center, rotate = 90] at (-0.25, -3.75) {\small{$a_1$}};
-	\node[align = center] at (-0.25, -2.5) {\small{$\vdots$}};
-	\node[align = center, rotate = 90] at (-0.25, -1.25) {\small{$a_6$}};
+	\node[align = center] at (0.25, -12.25) {\small{$a_1$}};
+	\node[align = center] at (1.5, -12.25) {\small{$\ldots$}};
+	\node[align = center] at (2.75, -12.25) {\small{$a_6$}};
+	\node[align = center, rotate = 90] at (-0.25, -11.75) {\small{$a_1$}};
+	\node[align = center] at (-0.25, -10.5) {\small{$\vdots$}};
+	\node[align = center, rotate = 90] at (-0.25, -9.25) {\small{$a_6$}};
 	
 	% Legend
 	\draw [draw = none, fill = white!20!yellow, fill opacity = 0.3] (24, 6) rectangle (25, 7);
@@ -121,8 +117,8 @@
 	\draw [draw = none, fill = white!50!red, fill opacity = 0.3] (24, 0) rectangle (25, 1);
 	\node[align = left] at (26, 6.5) {Unchanged};
 	\node[align = left] at (25.75, 4.5) {Reduced};
-	\node[align = left] at (26.65, 2.5) {Changed (less school\\ contact expected)};
-	\node[align = left] at (26.75, 0.5) {Changed (more school\\ contact expected)};
+	\node[align = left] at (26.65, 2.5) {Changed (more school\\ contact expected)};
+	\node[align = left] at (26.75, 0.5) {Changed (less school\\ contact expected)};
 	
 	% Vertical lines for age groups	
 	\draw [dotted, thin] (0.5, 0) -- (0.5, 3);
@@ -337,6 +333,7 @@
 	\draw [dotted, thin] (17, -3) -- (20, -3);
 	\draw [dotted, thin] (17, -3.5) -- (20, -3.5);
 	
+% Bits added for time scale
 	\draw [dotted, thin] (0.5, -1) -- (0.5, -4);
 	\draw [dotted, thin] (1, -1) -- (1, -4);
 	\draw [dotted, thin] (1.5, -1) -- (1.5, -4);
@@ -366,7 +363,160 @@
 	\draw [dotted, thin] (18.5, -1) -- (18.5, -4);
 	\draw [dotted, thin] (19, -1) -- (19, -4);
 	\draw [dotted, thin] (19.5, -1) -- (19.5, -4);
-
+	
+	\draw [dotted, thin] (0.5, -9) -- (0.5, -12);
+	\draw [dotted, thin] (1, -9) -- (1, -12);
+	\draw [dotted, thin] (1.5, -9) -- (1.5, -12);
+	\draw [dotted, thin] (2, -9) -- (2, -12);
+	\draw [dotted, thin] (2.5, -9) -- (2.5, -12);
+	
+	\draw [dotted, thin] (4.5, -9) -- (4.5, -12);
+	\draw [dotted, thin] (5, -9) -- (5, -12);
+	\draw [dotted, thin] (5.5, -9) -- (5.5, -12);
+	\draw [dotted, thin] (6, -9) -- (6, -12);
+	\draw [dotted, thin] (6.5, -9) -- (6.5, -12);
+	
+	\draw [dotted, thin] (8.5, -9) -- (8.5, -12);
+	\draw [dotted, thin] (9, -9) -- (9, -12);
+	\draw [dotted, thin] (9.5, -9) -- (9.5, -12);
+	\draw [dotted, thin] (10, -9) -- (10, -12);
+	\draw [dotted, thin] (10.5, -9) -- (10.5, -12);
+	
+	\draw [dotted, thin] (12.5, -9) -- (12.5, -12);
+	\draw [dotted, thin] (13, -9) -- (13, -12);
+	\draw [dotted, thin] (13.5, -9) -- (13.5, -12);
+	\draw [dotted, thin] (14, -9) -- (14, -12);
+	\draw [dotted, thin] (14.5, -9) -- (14.5, -12);
+	
+	\draw [dotted, thin] (17.5, -9) -- (17.5, -12);
+	\draw [dotted, thin] (18, -9) -- (18, -12);
+	\draw [dotted, thin] (18.5, -9) -- (18.5, -12);
+	\draw [dotted, thin] (19, -9) -- (19, -12);
+	\draw [dotted, thin] (19.5, -9) -- (19.5, -12);
+	
+	\draw [dotted, thin] (0.5, -5) -- (0.5, -8);
+	\draw [dotted, thin] (1, -5) -- (1, -8);
+	\draw [dotted, thin] (1.5, -5) -- (1.5, -8);
+	\draw [dotted, thin] (2, -5) -- (2, -8);
+	\draw [dotted, thin] (2.5, -5) -- (2.5, -8);
+	
+	\draw [dotted, thin] (4.5, -5) -- (4.5, -8);
+	\draw [dotted, thin] (5, -5) -- (5, -8);
+	\draw [dotted, thin] (5.5, -5) -- (5.5, -8);
+	\draw [dotted, thin] (6, -5) -- (6, -8);
+	\draw [dotted, thin] (6.5, -5) -- (6.5, -8);
+	
+	\draw [dotted, thin] (8.5, -5) -- (8.5, -8);
+	\draw [dotted, thin] (9, -5) -- (9, -8);
+	\draw [dotted, thin] (9.5, -5) -- (9.5, -8);
+	\draw [dotted, thin] (10, -5) -- (10, -8);
+	\draw [dotted, thin] (10.5, -5) -- (10.5, -8);
+	
+	\draw [dotted, thin] (12.5, -5) -- (12.5, -8);
+	\draw [dotted, thin] (13, -5) -- (13, -8);
+	\draw [dotted, thin] (13.5, -5) -- (13.5, -8);
+	\draw [dotted, thin] (14, -5) -- (14, -8);
+	\draw [dotted, thin] (14.5, -5) -- (14.5, -8);
+	
+	\draw [dotted, thin] (17.5, -5) -- (17.5, -8);
+	\draw [dotted, thin] (18, -5) -- (18, -8);
+	\draw [dotted, thin] (18.5, -5) -- (18.5, -8);
+	\draw [dotted, thin] (19, -5) -- (19, -8);
+	\draw [dotted, thin] (19.5, -5) -- (19.5, -8);
+	
+	\draw [dotted, thin] (0, -5.5) -- (3, -5.5);
+	\draw [dotted, thin] (0, -6) -- (3, -6);
+	\draw [dotted, thin] (0, -6.5) -- (3, -6.5);
+	\draw [dotted, thin] (0, -7) -- (3, -7);
+	\draw [dotted, thin] (0, -7.5) -- (3, -7.5);
+	
+	\draw [dotted, thin] (4, -5.5) -- (7, -5.5);
+	\draw [dotted, thin] (4, -6) -- (7, -6);
+	\draw [dotted, thin] (4, -6.5) -- (7, -6.5);
+	\draw [dotted, thin] (4, -7) -- (7, -7);
+	\draw [dotted, thin] (4, -7.5) -- (7, -7.5);
+	
+	\draw [dotted, thin] (8, -5.5) -- (11, -5.5);
+	\draw [dotted, thin] (8, -6) -- (11, -6);
+	\draw [dotted, thin] (8, -6.5) -- (11, -6.5);
+	\draw [dotted, thin] (8, -7) -- (11, -7);
+	\draw [dotted, thin] (8, -7.5) -- (11, -7.5);
+	
+	\draw [dotted, thin] (12, -5.5) -- (15, -5.5);
+	\draw [dotted, thin] (12, -6) -- (15, -6);
+	\draw [dotted, thin] (12, -6.5) -- (15, -6.5);
+	\draw [dotted, thin] (12, -7) -- (15, -7);
+	\draw [dotted, thin] (12, -7.5) -- (15, -7.5);
+	
+	\draw [dotted, thin] (17, -5.5) -- (20, -5.5);
+	\draw [dotted, thin] (17, -6) -- (20, -6);
+	\draw [dotted, thin] (17, -6.5) -- (20, -6.5);
+	\draw [dotted, thin] (17, -7) -- (20, -7);
+	\draw [dotted, thin] (17, -7.5) -- (20, -7.5);
+	
+	\draw [dotted, thin] (0, -9.5) -- (3, -9.5);
+	\draw [dotted, thin] (0, -10) -- (3, -10);
+	\draw [dotted, thin] (0, -10.5) -- (3, -10.5);
+	\draw [dotted, thin] (0, -11) -- (3, -11);
+	\draw [dotted, thin] (0, -11.5) -- (3, -11.5);
+	
+	\draw [dotted, thin] (4, -9.5) -- (7, -9.5);
+	\draw [dotted, thin] (4, -10) -- (7, -10);
+	\draw [dotted, thin] (4, -10.5) -- (7, -10.5);
+	\draw [dotted, thin] (4, -11) -- (7, -11);
+	\draw [dotted, thin] (4, -11.5) -- (7, -11.5);
+	
+	\draw [dotted, thin] (8, -9.5) -- (11, -9.5);
+	\draw [dotted, thin] (8, -10) -- (11, -10);
+	\draw [dotted, thin] (8, -10.5) -- (11, -10.5);
+	\draw [dotted, thin] (8, -11) -- (11, -11);
+	\draw [dotted, thin] (8, -11.5) -- (11, -11.5);
+	
+	\draw [dotted, thin] (12, -9.5) -- (15, -9.5);
+	\draw [dotted, thin] (12, -10) -- (15, -10);
+	\draw [dotted, thin] (12, -10.5) -- (15, -10.5);
+	\draw [dotted, thin] (12, -11) -- (15, -11);
+	\draw [dotted, thin] (12, -11.5) -- (15, -11.5);
+	
+	\draw [dotted, thin] (17, -9.5) -- (20, -9.5);
+	\draw [dotted, thin] (17, -10) -- (20, -10);
+	\draw [dotted, thin] (17, -10.5) -- (20, -10.5);
+	\draw [dotted, thin] (17, -11) -- (20, -11);
+	\draw [dotted, thin] (17, -11.5) -- (20, -11.5);
+	
+	\draw [draw = none, fill = white!20!yellow, fill opacity = 0.3] (8, -5) rectangle (11, -8);
+	\draw [draw = none, fill = white!20!yellow, fill opacity = 0.3] (8, -9) rectangle (11, -12);
+	
+	% Second row
+	\draw [draw = none, pattern = north east lines] (4, -5) rectangle (7, -8);
+	\draw [draw = none, pattern = north east lines] (12, -5) rectangle (15, -8);
+	\draw [draw = none, pattern = north east lines] (4, -9) rectangle (7, -12);
+	\draw [draw = none, pattern = north east lines] (12, -9) rectangle (15, -12);
+	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (4, -5) rectangle (7, -8);
+	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (12, -5) rectangle (15, -8);
+	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (4, -9) rectangle (7, -12);
+	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (12, -9) rectangle (15, -12);
+	
+	\draw [draw = none, pattern = north east lines] (0.5, -9) rectangle (3, -11.5);
+	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (0.5, -9) rectangle (3, -11.5);
+	\draw [draw = none, pattern = north east lines] (17.5, -9) rectangle (20, -11.5);
+	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (17.5, -9) rectangle (20, -11.5);
+	
+	\draw [draw = none, pattern = north east lines] (0, -5) rectangle (3, -8);
+	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (0, -5) rectangle (3, -8);
+	\draw [draw = none, pattern = north east lines] (17, -5) rectangle (20, -8);
+	\draw [draw = none, fill = white!50!blue, fill opacity = 0.3] (17, -5) rectangle (20, -8);
+	
+	\draw [draw = none, fill = white!50!red, fill opacity = 0.3] (0, -12) rectangle (3, -11.5);
+	\draw [draw = none, fill = white!50!red, fill opacity = 0.3] (17, -12) rectangle (20, -11.5);
+	
+	\draw [draw = none, fill = white!50!red, fill opacity = 0.3] (0, -9) rectangle (0.5, -11.5);
+	\draw [draw = none, fill = white!50!red, fill opacity = 0.3] (17, -9) rectangle (17.5, -11.5);
+	\draw [draw = none, pattern = vertical lines] (0, -9) rectangle (0.5, -11.5);
+	\draw [draw = none, pattern = vertical lines] (17, -9) rectangle (17.5, -11.5);
+	\draw [draw = none, pattern = vertical lines] (17, -12) rectangle (20, -11.5);
+	\draw [draw = none, pattern = vertical lines] (0, -12) rectangle (3, -11.5);
+	
 % Add plus signs
 	\node[align = left] at (3.5, 9.5) {$+$};
 	\node[align = left] at (3.5, 5.5) {$+$};
@@ -380,7 +530,15 @@
 	\node[align = left] at (11.5, 5.5) {$+$};
 	\node[align = left] at (11.5, 1.5) {$+$};
 	\node[align = left] at (11.5, -2.5) {$+$};
-
+	
+	\node[align = left] at (3.5, -6.5) {$+$};
+	\node[align = left] at (7.5, -6.5) {$+$};
+	\node[align = left] at (11.5, -6.5) {$+$};
+	\node[align = left] at (3.5, -10.5) {$+$};
+	\node[align = left] at (7.5, -10.5) {$+$};
+	\node[align = left] at (11.5, -10.5) {$+$};
+	\draw [->, thick] (15.5, -6.5) -- (16.5, -6.5);
+	\draw [->, thick] (15.5, -10.5) -- (16.5, -10.5);
 \end{tikzpicture}
 
 \end{document}
